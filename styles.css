@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  display: flex;
+  background-color: black;
+  overflow: hidden;
+}
+
+.maincontainer {
+  position: absolute;
+  top: 50px;
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: red;
+}
+
+/* header css */
+.headerbar {
+  position: absolute;
+  display: flex;
+  top: 0;
+  width: 100vw;
+  height: 50px;
+  background-color: black;
+  z-index: 1;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.headerbar div {
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.headerbar .menu {
+  height: inherit;
+  width: 50px;
+  background-image: url("img/menu.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.headerbar .logo {
+  width: 150px;
+  height: inherit;
+  background-image: url("img/centennialtoyotabanner.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.headerbar .logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.headerbar .login {
+  display: flex;
+  max-width: 33%;
+  height: inherit;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 25px;
+  padding-right: 10px;
+}
+
+/* menus */
+.dropmenu {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  background-color: black;
+  top: 50px;
+  z-index: 2;
+}
+
+.dropmenu a {
+  display: block;
+  width: 100px;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 1em;
+}
+
+.usermenu {
+  display: none;
+  right: 0;
+}
+
+.actionmenu {
+  left: 0;
+  display: none;
+}
+
+.loginmenu {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  font-size: 30px;
+  z-index: 2;
+  top: 40vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  color: white;
+  box-shadow: 7px 5px 5px #222;
+}
+
+.loginmenu .loginform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.loginmenu .loginform input {
+  background-color: black;
+  font-size: 20px;
+  text-align: center;
+  margin: 1em;
+  color: white;
+}
+
+.loginmenu .loginform button {
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  padding: .25em;
+}
+
+/* search */
+.searchform {
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.searchform input {
+  margin-top: 100px;
+  margin-bottom: 150px;
+  width: 80%;
+  background-color: black;
+  border-radius: 20px;
+  font-size: 20px;
+  text-align: center;
+  padding: 1em;
+  color: white;
+}
+
+.searchbuttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.searchbuttons button {
+  padding: 1em;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+/* vehicle info page */
+.vehicleinfo {
+  display: flex;
+  flex-direction: column;
+  background-color: #444;
+  align-items: center;
+  text-align: center;
+  width: 400px;
+  overflow: hidden;
+}
+.vehicleinfo input {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.vehinfotable input{
+  width: 75px;
+}
+.vehicleinfo .vehnumbers{
+  display: flex;
+  align-self: stretch;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.vehicleinfo .vehnumbers .stocknumber input {
+  width: 75px;
+}
