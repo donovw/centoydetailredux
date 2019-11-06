@@ -1,5 +1,6 @@
 <?php require 'header.php'; ?>
 <div class="maincontainer">
+  <?php include "includes/vehinfo.php" ?>
 <div class="searchform">
   Search for Vehicle
     <input type="text" name="mainsearch" value="" maxlength="17" placeholder="VIN OR STOCK #">
