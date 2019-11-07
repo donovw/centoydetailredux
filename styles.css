@@ -190,6 +190,7 @@ body {
   transform: translateX(-50%);
   width: 400px;
   overflow: hidden;
+  border-radius: 25px;
 }
 .vehicleinfo input {
   font-size: 18px;
