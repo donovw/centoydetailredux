@@ -6,12 +6,12 @@
     <div class="vinnumber">
       vin Number:
       <br>
-      <input type="text" name="vinnumber" value="">
+      <input type="text" name="vinnumber" value="" placeholder="VIN">
     </div>
     <div class="stocknumber">
       Stock #:
       <br>
-      <input type="text" name="stknumber" value="">
+      <input type="text" name="stknumber" value="" placeholder="STOCK #">
     </div>
   </div>
   <div class="vehinfotable">
