@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  transition: .2s linear;
 }
 
 body {
@@ -177,12 +178,14 @@ body {
 /* vehicle info page */
 .vehicleinfo {
   position: absolute;
+  display: none;
   top:10%;
   left:50%;
   height:80%;
-  display: flex;
+  /* display: flex; */
+  font-size: 24px;
   flex-direction: column;
-  background-color: #444;
+  background-color: #666;
   align-items: center;
   text-align: center;
   transform: translateX(-50%);
@@ -193,6 +196,8 @@ body {
   background-color: black;
   color: white;
   text-align: center;
+  padding: 5px;
+  border-radius: 5px;
 }
 .vehinfotable input{
   width: 75px;
