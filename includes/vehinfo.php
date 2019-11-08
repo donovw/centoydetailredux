@@ -41,8 +41,8 @@
     <textarea name="comarea" id="comarea" rows="8" cols="80"></textarea>
   </div>
   <div class="buttons">
-    <button type="button" name="button">cancel</button>
+    <button type="button" name="button" id="exitnosave">Exit without Saving</button>
     <!-- <button type="button" name="button">checklist</button> -->
-    <button type="button" name="button">Save and Exit</button>
+    <button type="button" name="button" id="exitsave">Save and Exit</button>
   </div>
 </div>
