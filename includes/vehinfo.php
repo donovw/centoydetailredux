@@ -1,17 +1,15 @@
-<head>
-  <link rel="stylesheet" href="../styles.css">
-</head>
+
 <div class="vehicleinfo" id="vehinfo">
   <div class="vehnumbers">
     <div class="vinnumber">
       vin Number:
       <br>
-      <input type="text" name="vinnumber" value="" placeholder="VIN">
+      <input type="text" id="vinnumber" name="vinnumber" value="" placeholder="VIN">
     </div>
     <div class="stocknumber">
       Stock #:
       <br>
-      <input type="text" name="stknumber" value="" placeholder="STOCK #">
+      <input type="text" id="stknumber" name="stknumber" value="" placeholder="STOCK #">
     </div>
   </div>
   <div class="vehinfotable">
@@ -33,14 +31,14 @@
   </table>
   </div>
   <div class="vehstatus">
-    <select class="statussel" name="statussel">
+    <select class="statussel" id="statussel" name="statussel">
       <option value="options" selected>options</option>
     </select>
   </div>
   <div class="comments">
     comments
     <br>
-    <textarea name="comarea" rows="8" cols="80"></textarea>
+    <textarea name="comarea" id="comarea" rows="8" cols="80"></textarea>
   </div>
   <div class="buttons">
     <button type="button" name="button">cancel</button>

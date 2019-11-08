@@ -9,6 +9,7 @@ body {
   display: flex;
   background-color: black;
   overflow: hidden;
+  align-items: center;
 }
 
 .maincontainer {
@@ -177,9 +178,9 @@ body {
 }
 /* vehicle info page */
 .vehicleinfo {
-  position: absolute;
+  position: fixed;
   /* display: none; */
-  top:5%;
+  top: 10%;
   left:50%;
   display: flex;
   font-size: 24px;
@@ -191,6 +192,7 @@ body {
   width: 400px;
   overflow: hidden;
   border-radius: 25px;
+  z-index: 1000;
 }
 .vehicleinfo input {
   font-size: 18px;
@@ -221,6 +223,7 @@ body {
   width: 90%;
   height: 35px;
   color: white;
+  font-size: 20px;
   background-color: black;
   border-radius: 20px;
 }

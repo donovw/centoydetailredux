@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/menus.js" charset="utf-8"></script>
+    <script src="js/loadveh.js" charset="utf-8"></script>
   </head>
   <body>
   <div class="headerbar">
