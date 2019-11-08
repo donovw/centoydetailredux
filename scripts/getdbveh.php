@@ -1,9 +1,9 @@
 <?php
   $by = $_GET['by'];
-  $sparam =  $_GET['sparam'];
+  $sparam =  "%" . $_GET['sparam'];
 
 
-  $sql = "SELECT * FROM vehicles WHERE " . $by . " = ?" ;
+  $sql = "SELECT * FROM vehicles WHERE " . $by . " LIKE ?" ;
   include_once 'dbh.php';
   $stmt = mysqli_stmt_init($conn);
   if (!mysqli_stmt_prepare($stmt,$sql)) {
