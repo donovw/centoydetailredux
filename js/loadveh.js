@@ -23,19 +23,45 @@ function loadVehInfo(param) {
             $('#color').val(js['color']).prop("readonly", "1");
             $('#statussel').val(js['status']);
             $('#comarea').val(js['comment']);
-            //  $('#recoest').val(formatMoney(js['estimate'])).prop("readonly","1");
+            formatRecon(js['estimate']);
+            $('#recoest').prop("readonly","1");
 
-            $("#exitnosave").on("click", close)
+            $("#exitnosave").on("click", close);
+            $("#exitsave").on("click", saveInfo)
           })
         }
       })
   }
 
-  function close(save) {
+  function close() {
     $("#vehinfocontainer").empty();
     elements.forEach((index) => {
       index.style.opacity = "1";
       document.getElementById('mainsearch').value = "";
     })
   }
+
+  function saveInfo() {
+    let form = document.getElementById('vehinfoform');
+    let fdata = new FormData(form);
+    fetch("./scripts/savevehinfo.php", {
+      method: "POST",
+      mode: 'cors',
+      body: fdata
+    }).then(res => console.log(res.status))
+  }
+}
+
+
+function formatRecon(value) {
+  if (isNaN(value) === true) {
+    alert("recon estimate cannot contain letters")
+  }else {
+      if (value.toString().includes(".") === true) {
+    $("#recoest").val(formatMoney(value))
+  }else  {
+     value = value + ".00";
+    $("#recoest").val(formatMoney(value))
+  }
+}
 }

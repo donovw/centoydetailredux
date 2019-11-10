@@ -1,5 +1,6 @@
 
 <div class="vehicleinfo" id="vehinfo">
+  <form id="vehinfoform">
   <div class="vehnumbers">
     <div class="vinnumber">
       vin Number:
@@ -22,10 +23,10 @@
     </thead>
     <tbody>
       <tr>
-        <td> <input type="text" id="year" value=""  placeholder="year"> </td>
-        <td> <input type="text" id="make" value=""  placeholder="make"> </td>
-        <td> <input type="text" id="model" value=""  placeholder="model"> </td>
-        <td> <input type="text" id="color" value=""  placeholder="color"> </td>
+        <td> <input type="text" id="year" value="" name="year" placeholder="year"> </td>
+        <td> <input type="text" id="make" value="" name="make" placeholder="make"> </td>
+        <td> <input type="text" id="model" value="" name="Model" placeholder="model"> </td>
+        <td> <input type="text" id="color" value="" name="color" placeholder="color"> </td>
       </tr>
     </tbody>
   </table>
@@ -40,8 +41,13 @@
     <br>
     <textarea name="comarea" id="comarea" rows="8" cols="80"></textarea>
   </div>
+  <div class="est">
+    RECON ESTIMATE: <input type="text" name="recoest" id="recoest" value="" onchange="formatRecon(this.value)">
+  </div>
+</form>
+
   <div class="buttons">
-    <button type="button" name="button" id="exitnosave">Exit without Saving</button>
+    <button type="button" name="button" id="exitnosave">Cancel</button>
     <!-- <button type="button" name="button">checklist</button> -->
     <button type="button" name="button" id="exitsave">Save and Exit</button>
   </div>

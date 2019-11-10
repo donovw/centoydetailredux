@@ -239,7 +239,7 @@ body {
 }
 .vehicleinfo .buttons  {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 25px;
 margin-bottom: 50px;
 display: flex;
 justify-content: space-around;
@@ -252,4 +252,15 @@ justify-content: space-around;
   color: white;
   width: 125px;
   border-radius: 15px;
+}
+.vehicleinfo .est{
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: oblique;
+  color: white;
+}
+.vehicleinfo .est input {
+  width: 25%;
 }
