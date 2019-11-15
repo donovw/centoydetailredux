@@ -14,18 +14,13 @@ function loadVehInfo(param) {
             index.style.opacity = ".2";
           })
           $("#vehinfocontainer").load("./includes/vehinfo.php", () => {
-            ;
-            $('#vinnumber').val(js['vin']).prop("readonly", "1");
-            $('#stknumber').val(js['stk']).prop("readonly", "1");
-            $('#year').val(js['year']).prop("readonly", "1");
-            $('#make').val(js['make']).prop("readonly", "1");
-            $('#model').val(js['model']).prop("readonly", "1");
-            $('#color').val(js['color']).prop("readonly", "1");
-            $('#statussel').val(js['status']);
-            $('#comarea').val(js['comment']);
-            formatRecon(js['estimate']);
-            $('#recoest').prop("readonly","1");
-
+            data = Object.keys(js);
+            data.forEach((k) => {
+              if (k === "id") {
+                return
+              }
+              document.getElementById(k).value = js[k];
+            })
             $("#exitnosave").on("click", close);
             $("#exitsave").on("click", saveInfo)
           })
@@ -48,7 +43,13 @@ function loadVehInfo(param) {
       method: "POST",
       mode: 'cors',
       body: fdata
-    }).then(res => console.log(res.status))
+    }).then(res => {
+      if (res.status !== 201 && res.status !== 202 ) {
+        alert(res.statusText);
+      }
+      console.log(res.statusText);
+      close();
+    });
   }
 }
 
@@ -56,12 +57,12 @@ function loadVehInfo(param) {
 function formatRecon(value) {
   if (isNaN(value) === true) {
     alert("recon estimate cannot contain letters")
-  }else {
-      if (value.toString().includes(".") === true) {
-    $("#recoest").val(formatMoney(value))
-  }else  {
-     value = value + ".00";
-    $("#recoest").val(formatMoney(value))
+  } else {
+    if (value.toString().includes(".") === true) {
+      $("#recoest").val(formatMoney(value))
+    } else {
+      value = value + ".00";
+      $("#recoest").val(formatMoney(value))
+    }
   }
-}
 }

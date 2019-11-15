@@ -18,7 +18,7 @@
       <div class="login"> <?php require 'includes/header.login.php'?> </div>
     </div>
       <div class="dropmenu actionmenu" id="action">
-      <a href="#">Vehicles</a>
+      <a href="allvehicles.php">Vehicles</a>
       <a href="#">users</a>
     </div>
 

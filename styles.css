@@ -176,12 +176,13 @@ body {
   color: white;
   border-radius: 10px;
 }
+
 /* vehicle info page */
 .vehicleinfo {
   position: fixed;
   /* display: none; */
   top: 10%;
-  left:50%;
+  left: 50%;
   display: flex;
   font-size: 24px;
   flex-direction: column;
@@ -194,6 +195,7 @@ body {
   border-radius: 25px;
   z-index: 1000;
 }
+
 .vehicleinfo input {
   font-size: 18px;
   background-color: black;
@@ -202,24 +204,29 @@ body {
   padding: 5px;
   border-radius: 5px;
 }
-.vehinfotable input{
+
+.vehinfotable input {
   width: 75px;
 }
-.vehicleinfo .vehnumbers{
+
+.vehicleinfo .vehnumbers {
   display: flex;
   align-self: stretch;
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
 }
+
 .vehicleinfo .vehnumbers .stocknumber input {
   width: 85px;
 }
+
 .vehicleinfo .vehstatus {
   margin-top: 20px;
   width: 400px;
 }
-.vehicleinfo .vehstatus select{
+
+.vehicleinfo .vehstatus select {
   width: 90%;
   height: 35px;
   color: white;
@@ -227,9 +234,11 @@ body {
   background-color: black;
   border-radius: 20px;
 }
+
 .vehicleinfo .comments {
   width: 400px;
 }
+
 .vehicleinfo .comments textarea {
   width: 90%;
   font-size: 20px;
@@ -237,14 +246,16 @@ body {
   background-color: black;
   color: white;
 }
-.vehicleinfo .buttons  {
+
+.vehicleinfo .buttons {
   width: 100%;
   margin-top: 25px;
-margin-bottom: 50px;
-display: flex;
-justify-content: space-around;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
 }
-.vehicleinfo .buttons button{
+
+.vehicleinfo .buttons button {
   text-align: center;
   font-size: 25px;
   height: 75px;
@@ -253,7 +264,8 @@ justify-content: space-around;
   width: 125px;
   border-radius: 15px;
 }
-.vehicleinfo .est{
+
+.vehicleinfo .est {
   margin-top: 15px;
   display: flex;
   align-items: center;
@@ -261,6 +273,16 @@ justify-content: space-around;
   font-style: oblique;
   color: white;
 }
+
 .vehicleinfo .est input {
   width: 25%;
+}
+
+/* all vehicles page */
+
+.allvehiclesmain {
+  width: 400px;
+  height: 100%;
+  background-color: rgba(68, 68, 68, .8);
+  z-index: 5;
 }
