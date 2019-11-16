@@ -188,6 +188,7 @@ body {
   flex-direction: column;
   background-color: #666;
   align-items: center;
+  justify-content: center;
   text-align: center;
   transform: translateX(-50%);
   width: 400px;
@@ -204,7 +205,10 @@ body {
   padding: 5px;
   border-radius: 5px;
 }
-
+.vehinfotable table {
+  margin-left: auto;
+  margin-right: auto;
+}
 .vehinfotable input {
   width: 75px;
 }
@@ -277,7 +281,6 @@ body {
 .vehicleinfo .est input {
   width: 25%;
 }
-
 /* all vehicles page */
 
 .allvehiclesmain {

@@ -10,6 +10,7 @@
     <script src="js/menus.js" charset="utf-8"></script>
     <script src="js/loadveh.js" charset="utf-8"></script>
     <script src="js/formatmoney.js" charset="utf-8"></script>
+    <script src="js/addvehicle.js" charset="utf-8"></script>
   </head>
   <body>
   <div class="headerbar">
