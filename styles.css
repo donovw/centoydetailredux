@@ -205,10 +205,12 @@ body {
   padding: 5px;
   border-radius: 5px;
 }
+
 .vehinfotable table {
   margin-left: auto;
   margin-right: auto;
 }
+
 .vehinfotable input {
   width: 75px;
 }
@@ -281,8 +283,8 @@ body {
 .vehicleinfo .est input {
   width: 25%;
 }
-/* all vehicles page */
 
+/* all vehicles page */
 .allvehiclesmain {
   width: 400px;
   height: 100%;

@@ -3,12 +3,12 @@
   <form id="vehinfoform">
   <div class="vehnumbers">
     <div class="vinnumber">
-      vin Number:
+      <label for="vin">vin Number:</label>
       <br>
-      <input type="text" id="vin" name="vin" value="" readonly placeholder="VIN">
+      <input type="text" id="vin" name="vin" value="" readonly autofocus autocomplete="none" maxlength="17" placeholder="VIN">
     </div>
     <div class="stocknumber">
-      Stock #:
+      <label for="stk">Stock #:</label>
       <br>
       <input type="text" id="stk" name="stk" value="" readonly placeholder="STOCK #">
     </div>
@@ -16,10 +16,10 @@
   <div class="vehinfotable">
     <table>
     <thead>
-      <th>Year</th>
-      <th>Make</th>
-      <th>Model</th>
-      <th>Color</th>
+      <th> <label for="year">Year</label> </th>
+      <th> <label for="make">Make</label> </th>
+      <th> <label for="model">Model</label> </th>
+      <th> <label for="color">Color</label> </th>
     </thead>
     <tbody>
       <tr>
@@ -37,14 +37,15 @@
     </select>
   </div>
   <div class="comments">
-    comments
+    <label for="comment">comments</label>
     <br>
     <textarea name="comment" id="comment" rows="8" cols="80"></textarea>
   </div>
   <div class="est">
-    RECON ESTIMATE: <input type="text" name="estimate" id="estimate" value="" onchange="formatRecon(this.value)">
+    <label for="estimate">RECON ESTIMATE:</label>
+     <input type="text" name="estimate" id="estimate" value="" onchange="formatRecon(this.value)">
   </div>
-  <input type="hidden" name="update" id="update" value="false">
+  <input type="hidden" name="update" id="update" value="true">
 </form>
 
   <div class="buttons">

@@ -19,18 +19,18 @@
               exit();
           } else {
               mysqli_stmt_bind_param(
-                $stmt,
-                "siisssssi",
-                $_POST['vin'],
-                $_POST['stk'],
-                $_POST['year'],
-                $_POST['make'],
-                $_POST['model'],
-                $_POST['color'],
-                $_POST['status'],
-                $_POST['comment'],
-                $_POST['est']
-            );
+                  $stmt,
+                  "siisssssi",
+                  $_POST['vin'],
+                  $_POST['stk'],
+                  $_POST['year'],
+                  $_POST['make'],
+                  $_POST['model'],
+                  $_POST['color'],
+                  $_POST['status'],
+                  $_POST['comment'],
+                  $_POST['est']
+              );
               mysqli_stmt_execute($stmt);
               http_response_code(201);
           }
@@ -43,18 +43,18 @@
               exit();
           } else {
               mysqli_stmt_bind_param(
-                        $stmt,
-                        "iisssssis",
-                        $_POST['stk'],
-                        $_POST['year'],
-                        $_POST['make'],
-                        $_POST['model'],
-                        $_POST['color'],
-                        $_POST['status'],
-                        $_POST['comment'],
-                        $_POST['estimate'],
-                        $_POST['vin']
-                    );
+                  $stmt,
+                  "iisssssis",
+                  $_POST['stk'],
+                  $_POST['year'],
+                  $_POST['make'],
+                  $_POST['model'],
+                  $_POST['color'],
+                  $_POST['status'],
+                  $_POST['comment'],
+                  $_POST['estimate'],
+                  $_POST['vin']
+              );
               mysqli_stmt_execute($stmt);
               http_response_code(202);
           }
