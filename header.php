@@ -1,4 +1,6 @@
-<?php session_start() ?>
+<?php session_start();
+      require 'config.class.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
