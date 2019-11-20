@@ -36,8 +36,24 @@
       $stmt->execute($sparam);
     }
 
-    public static function addNewVehicle(){}
+    public static function addNewVehicle(array $sparam){
+      $db = DB::getInstance();
+      $sqlkeys = implode(",",array_keys($sparam));
+      $sqlkeysextended = "";
+      foreach ($sparam as $key => $value) {
+        $sqlkeysextended = $sqlkeysextended . ":" . $key .", ";
+      }
+      $sqlkeysextended = substr($sqlkeysextended,0,-2);
+      $sql = "INSERT INTO vehicles ({$sqlkeys}) VALUES ({$sqlkeysextended})" ;
+      echo $sql;
+      $stmt = $db->prepare($sql);
+      $stmt->execute($sparam);
+    }
   }
 
-$veh = Vehicle::getSingleVehicle("stk", "490001");
-print_r($veh);
+$arr = array();
+foreach ($_POST as $key => $value) {
+  $arr += array($key => $value);
+}
+
+Vehicle::addNewVehicle($arr);
