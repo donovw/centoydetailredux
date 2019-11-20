@@ -19,7 +19,6 @@ class DB
       }
 
     }
-    echo "connected to database";
     return self::$_instance;
   }
 }

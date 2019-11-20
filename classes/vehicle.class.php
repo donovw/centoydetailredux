@@ -7,7 +7,7 @@
   {
     public static function getSingleVehicle($sby, $sparam){
       $db = DB::getInstance();
-      $sql = `SELECT * FROM vehicles WHERE {$sby} LIKE ?`;
+      $sql = "SELECT * FROM vehicles WHERE {$sby} LIKE ?";
       $stmt = $db->prepare($sql);
       $stmt->execute([$sparam]);
       $result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -25,12 +25,19 @@
 
     public static function updateVehicle(array $sparam){
       $db = DB::getInstance();
-      $sqlkeys = implode(",", array_keys($sparam));
-      echo $sqlkeys;
-      $sql = `UPDATE vehicles SET ({$sqlkeys}) `;
+      $sqlkeys = "";
+      foreach ($sparam as $key => $value) {
+        $sqlkeys = $sqlkeys . $key . " = :" . $key . ", ";
+      }
+      $sqlkeys = substr($sqlkeys ,0,-2);
+      $sql = "UPDATE vehicles SET {$sqlkeys} WHERE id = :id";
+      echo $sql;
+      $stmt = $db->prepare($sql);
+      $stmt->execute($sparam);
     }
 
     public static function addNewVehicle(){}
   }
 
-Vehicle::updateVehicle(["test" => "this is a test", "test2" => "this is a second test"]);
+$veh = Vehicle::getSingleVehicle("stk", "490001");
+print_r($veh);
